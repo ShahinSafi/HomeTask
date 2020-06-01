@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_3sdp">
+
+            <ImageView
+                android:id="@+id/detailsImageID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detailsTitleID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Title: title"
+                android:textColor="#000"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/detailsProductID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product ID: 10"
+                android:textColor="#000"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/detailsPriceID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: 100tk"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/lorem_text"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="#000"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/colorPrimary"
+        android:text="Buy Now"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="13dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
